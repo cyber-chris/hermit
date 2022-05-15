@@ -15,6 +15,7 @@
 	<div id="spotlight" class="animated fadeIn">
 		<div id="home-center">
 			<h1 id="home-title">{{ .Site.Title }}</h1>
+			<canvas id="canvas"></canvas>
 			{{- with .Site.Params.homeSubtitle }}
 			<p id="home-subtitle">{{.}}</p>
 			{{- end }}
