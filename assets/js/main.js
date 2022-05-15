@@ -180,7 +180,6 @@ if (canvas !== null && canvas.getContext) {
     const y = Math.max(Math.floor((event.layerY - canvasRect.y)/cellHeight), 0);
     const cellIndex = x + y*(width/cellWidth);
     grid[y][x] = !grid[y][x];
-    drawGrid(ctx);
   });
 
   initGrid();
