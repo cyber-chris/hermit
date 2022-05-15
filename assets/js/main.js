@@ -184,5 +184,6 @@ if (canvas !== null && canvas.getContext) {
 
   initGrid();
   drawGrid(ctx);
+  await new Promise(r => setTimeout(r, 500)); // sleep so user can see start state
   setInterval(drawAndUpdate, 300, ctx);
 }
