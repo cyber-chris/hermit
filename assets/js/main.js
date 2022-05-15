@@ -28,6 +28,15 @@ const listen = (ele, e, callback) => {
  * Functions
  */
 
+// Game of Life
+//
+const canvas = document.getElementById('canvas');
+const runLife = () => {
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'green';
+  ctx.fillRect(10, 10, 150, 100);
+}
+
 // Auto Hide Header
 //
 let header = document.getElementById('site-header');
@@ -99,4 +108,8 @@ if (header !== null) {
       toggleMobileMenu();
     }
   }, 250));
+}
+
+if (canvas !== null) {
+  runLife();
 }
