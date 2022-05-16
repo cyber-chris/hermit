@@ -57,7 +57,7 @@ const drawGrid = (ctx) => {
     	ctx.strokeStyle = 'grey';
       ctx.strokeRect(x*cellWidth, y*cellHeight, cellWidth, cellHeight);
       if (grid[y][x]) {
-        ctx.fillStyle = 'purple';
+        ctx.fillStyle = '#5c5649';
         ctx.fillRect(x*cellWidth, y*cellHeight, cellWidth, cellHeight);
       }
     }
@@ -173,14 +173,6 @@ if (canvas !== null && canvas.getContext) {
   canvas.width = width;
 
   const ctx = canvas.getContext('2d');
-
-  canvas.addEventListener('click', function(event) {
-    const canvasRect = canvas.getBoundingClientRect();
-    const x = Math.max(Math.floor((event.layerX - canvasRect.x)/cellWidth), 0);
-    const y = Math.max(Math.floor((event.layerY - canvasRect.y)/cellHeight), 0);
-    const cellIndex = x + y*(width/cellWidth);
-    grid[y][x] = !grid[y][x];
-  });
 
   initGrid();
   drawGrid(ctx);
