@@ -57,7 +57,7 @@ const drawGrid = (ctx) => {
     	ctx.strokeStyle = 'grey';
       ctx.strokeRect(x*cellWidth, y*cellHeight, cellWidth, cellHeight);
       if (grid[y][x]) {
-        ctx.fillStyle = '#5c5649';
+        ctx.fillStyle = 'purple';
         ctx.fillRect(x*cellWidth, y*cellHeight, cellWidth, cellHeight);
       }
     }
